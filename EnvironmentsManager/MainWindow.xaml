@@ -12,10 +12,10 @@
         AllowsTransparency="True"
         Background="Transparent"        
         WindowStartupLocation="CenterScreen"
-        Height="500"
-        Width="800"
-        MinHeight="500"
-        MinWidth="800">
+        Height="600"
+        Width="900"
+        MinHeight="600"
+        MinWidth="900">
 
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">

@@ -25,7 +25,9 @@
                 <ResourceDictionary Source="/styles/RadioButton.xaml"/>
                 <ResourceDictionary Source="/styles/GridViewColumnHeader.xaml"/>
                 <ResourceDictionary Source="/styles/ListViewItem.xaml"/>
-                <ResourceDictionary Source="/styles/CheckBox.xaml"/> 
+                <ResourceDictionary Source="/styles/CheckBox.xaml"/>
+                <ResourceDictionary Source="/styles/ComboBox.xaml"/>
+                <ResourceDictionary Source="/styles/ComboBoxItem.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
