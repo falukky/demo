@@ -1,0 +1,32 @@
+﻿<Application x:Class="EnvironmentsManager.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:EnvironmentsManager"
+             xmlns:convertors="clr-namespace:EnvironmentsManager.classes.convertors"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <FontFamily x:Key="PolenticalNeonRegular">pack://application:,,,/Fonts/#Polentical Neon Regular</FontFamily>
+            <SolidColorBrush x:Key="LabelForegroundColor" Color="#505050"/>
+            <SolidColorBrush x:Key="LabelDisableForegroundColor" Color="#202020"/>
+
+            <convertors:TextBlockToEnvironmentConvertor x:Key="TextBlockToEnvironmentConvertor"/>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Red.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+
+                <ResourceDictionary Source="/styles/Button.xaml"/>
+                <ResourceDictionary Source="/styles/Label.xaml"/>
+                <ResourceDictionary Source="/styles/Separator.xaml"/>
+                <ResourceDictionary Source="/styles/TextBlock.xaml"/>
+                <ResourceDictionary Source="/styles/RadioButton.xaml"/>
+                <ResourceDictionary Source="/styles/GridViewColumnHeader.xaml"/>
+                <ResourceDictionary Source="/styles/ListViewItem.xaml"/>
+                <ResourceDictionary Source="/styles/CheckBox.xaml"/> 
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
