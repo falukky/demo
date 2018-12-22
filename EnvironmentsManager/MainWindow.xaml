@@ -407,14 +407,29 @@
                                           Unchecked="CheckBoxORD1_Unchecked"
 						                  Margin="0,0,0,0"/>
                                         <CheckBox Name="CheckBoxAT"
-                                          Content="AT"       
-                                          Grid.Row="0"
-                                          Grid.Column="2"
-                                          VerticalAlignment="Center"
-                                          IsChecked="{Binding Path=IsSelected}"
-                                          Checked="CheckBoxAT_Checked"
-                                          Unchecked="CheckBoxAT_Unchecked"
-						                  Margin="0,0,0,0"/>
+                                                  Content="AT"       
+                                                  Grid.Row="0"
+                                                  Grid.Column="2"
+                                                  VerticalAlignment="Center"
+                                                  IsChecked="{Binding Path=IsSelected}"
+                                                  Checked="CheckBoxAT_Checked"
+                                                  Unchecked="CheckBoxAT_Unchecked"
+						                          Margin="0,0,0,0"/>
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <ComboBox Name="ComboBoxEnvironment"        
+                                                  SelectedIndex="0"
+                                                  Height="30"
+                                                  Width="150"
+                                                  Style="{StaticResource ComboBoxDefaultFlatStyle}"
+                                                  ItemContainerStyle="{StaticResource ComboBoxItemDefaultStyle}">
+                                            <ComboBoxItem Content="-- Selece --"/>
+                                            <ComboBoxItem Content="RV"/>
+                                            <ComboBoxItem Content="PDK"/>
+                                            <ComboBoxItem Content="ORD"/>
+                                            <ComboBoxItem Content="ORD1"/>
+                                            <ComboBoxItem Content="AT"/>
+                                        </ComboBox>
                                     </Grid>
                                 </Grid>
                             </Grid>

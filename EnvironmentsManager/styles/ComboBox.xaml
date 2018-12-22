@@ -60,8 +60,8 @@
         <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
         <Setter Property="TextElement.Foreground" Value="Gainsboro"/>
         <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}"/>
-        <Setter Property="FontFamily" Value="{DynamicResource applicationFontFamily}"/>
-        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontFamily" Value="{DynamicResource PolenticalNeonRegular}"/>
+        <Setter Property="FontSize" Value="12"/>
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ComboBox">

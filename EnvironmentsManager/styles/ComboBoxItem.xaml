@@ -6,9 +6,10 @@
         <Setter Property="SnapsToDevicePixels" Value="true" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
         <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="FontFamily" Value="{DynamicResource ApplicationFontFamily}"/>
-        <Setter Property="FontSize" Value="{DynamicResource ApplicationFontSize}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource PolenticalNeonRegular}"/>
+        <Setter Property="FontSize" Value="12"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ComboBoxItem">
@@ -19,7 +20,7 @@
                             CornerRadius="0"
                             Background="Transparent"
                             BorderBrush="Transparent">
-                        <TextBlock TextAlignment="Left">
+                        <TextBlock TextAlignment="Center">
                             <ContentPresenter />
                         </TextBlock>
                     </Border>

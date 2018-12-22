@@ -73,5 +73,4 @@ C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.exe
 C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.pdb
 C:\repo\demo\EnvironmentsManager\bin\Debug\environment_settings.xml
 C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager_Content.g.cs
-C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.csprojAssemblyReference.cache
 C:\repo\demo\EnvironmentsManager\obj\Debug\styles\ComboBoxItem.baml
