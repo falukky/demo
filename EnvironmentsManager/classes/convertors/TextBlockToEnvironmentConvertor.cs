@@ -14,7 +14,7 @@ namespace EnvironmentsManager.classes.convertors
         {
             env.Environment environment = (env.Environment)value;
             if (environment != null)
-                return environment.Name;
+                return environment.URL.ToUpper();
             return "";
         }
 

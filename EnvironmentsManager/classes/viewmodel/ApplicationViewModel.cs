@@ -42,6 +42,7 @@ namespace EnvironmentsManager.classes.viewmodel
             set
             {
                 _selectedEnvironment = value;
+                _users = _selectedEnvironment.Users;
                 NotifyPropertyChanged();
             }
         }

@@ -520,7 +520,17 @@
                 <Border BorderBrush="#202020" BorderThickness="0,0.5,0,0" Grid.Row="2">
                     <StatusBar Background="Transparent">
                         <StatusBarItem>
-                            <TextBlock Text="{Binding Path=SelectedEnvironment, Converter={StaticResource TextBlockToEnvironmentConvertor}}"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Path=SelectedEnvironment, Converter={StaticResource TextBlockToEnvironmentConvertor}}"
+                                           FontSize="16"
+                                           Grid.Column="1"
+                                           Margin="0,0,0,0"/>
+                            </Grid>
                         </StatusBarItem>
                     </StatusBar>
                 </Border>

@@ -4,6 +4,7 @@ using EnvironmentsManager.classes.viewmodel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -30,7 +31,7 @@ namespace EnvironmentsManager
 
         private void ReadXML()
         {
-            string xml = @"C:\Users\raviv\OneDrive\Desktop\settings.xml";
+            string xml = Path.Combine(Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath), "environment_settings.xml");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(xml);
 
@@ -99,6 +100,20 @@ namespace EnvironmentsManager
             StateClosed = !StateClosed;
         }
 
+        private void SetSelectedEnvironment(string name)
+        {
+            foreach (classes.env.Environment environment in applicationViewModel.Environments)
+            {
+                if (environment.Name.ToLower() == name)
+                {
+                    applicationViewModel.SelectedEnvironment = environment;
+                    break;
+                }
+            }
+
+            ListViewUsers.ItemsSource = applicationViewModel.Users;
+        }
+
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -117,10 +132,7 @@ namespace EnvironmentsManager
             CheckBoxAT.IsChecked = false;
 
             ListViewUsers.ItemsSource = null;
-            applicationViewModel.Users = applicationViewModel.Environments[0].Users;
-            ListViewUsers.ItemsSource = applicationViewModel.Users;
-
-            applicationViewModel.SelectedEnvironment = applicationViewModel.Environments[0];
+            SetSelectedEnvironment("rv");
         }
 
         private void CheckBoxRV_Unchecked(object sender, RoutedEventArgs e)
@@ -135,10 +147,9 @@ namespace EnvironmentsManager
             CheckBoxORD1.IsChecked = false;
             CheckBoxAT.IsChecked = false;
             ListViewUsers.ItemsSource = null;
-            applicationViewModel.Users = applicationViewModel.Environments[1].Users;
-            ListViewUsers.ItemsSource = applicationViewModel.Users;
+            
 
-            applicationViewModel.SelectedEnvironment = applicationViewModel.Environments[1];
+            SetSelectedEnvironment("pdk");
         }
 
         private void CheckBoxPDK_Unchecked(object sender, RoutedEventArgs e)
@@ -152,6 +163,7 @@ namespace EnvironmentsManager
             CheckBoxPDK.IsChecked = false;
             CheckBoxORD1.IsChecked = false;
             CheckBoxAT.IsChecked = false;
+            SetSelectedEnvironment("ord");
         }
 
         private void CheckBoxORD_Unchecked(object sender, RoutedEventArgs e)
@@ -165,6 +177,7 @@ namespace EnvironmentsManager
             CheckBoxPDK.IsChecked = false;
             CheckBoxORD.IsChecked = false;
             CheckBoxAT.IsChecked = false;
+            SetSelectedEnvironment("ord1");
         }
 
         private void CheckBoxORD1_Unchecked(object sender, RoutedEventArgs e)
@@ -178,6 +191,7 @@ namespace EnvironmentsManager
             CheckBoxPDK.IsChecked = false;
             CheckBoxORD.IsChecked = false;
             CheckBoxORD1.IsChecked = false;
+            SetSelectedEnvironment("at");
         }
 
         private void CheckBoxAT_Unchecked(object sender, RoutedEventArgs e)

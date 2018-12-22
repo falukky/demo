@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\raviv\Dropbox\projects\c#\EnvironmentsManager\EnvironmentsManager\obj\Debug\
+C:\repo\demo\EnvironmentsManager\obj\Debug\
 EnvironmentsManager
 none
 false
 DEBUG;TRACE
-C:\Users\raviv\Dropbox\projects\c#\EnvironmentsManager\EnvironmentsManager\App.xaml
+C:\repo\demo\EnvironmentsManager\App.xaml
 10560632334
-
+1-411359841
 22-2073297511
-201629233439
+20-732218388
 MainWindow.xaml;styles\Button.xaml;styles\CheckBox.xaml;styles\ComboBox.xaml;styles\GridViewColumnHeader.xaml;styles\Label.xaml;styles\ListViewItem.xaml;styles\RadioButton.xaml;styles\Separator.xaml;styles\TextBlock.xaml;
 
-True
+False
 
