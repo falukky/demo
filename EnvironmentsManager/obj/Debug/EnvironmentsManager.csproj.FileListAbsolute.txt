@@ -35,6 +35,7 @@ C:\Users\raviv\Dropbox\projects\c#\EnvironmentsManager\EnvironmentsManager\obj\D
 C:\Users\raviv\Dropbox\projects\c#\EnvironmentsManager\EnvironmentsManager\obj\Debug\EnvironmentsManager.csproj.CopyComplete
 C:\Users\raviv\Dropbox\projects\c#\EnvironmentsManager\EnvironmentsManager\obj\Debug\EnvironmentsManager.exe
 C:\Users\raviv\Dropbox\projects\c#\EnvironmentsManager\EnvironmentsManager\obj\Debug\EnvironmentsManager.pdb
+C:\repo\demo\EnvironmentsManager\bin\Debug\environment_settings.xml
 C:\repo\demo\EnvironmentsManager\bin\Debug\EnvironmentsManager.exe.config
 C:\repo\demo\EnvironmentsManager\bin\Debug\EnvironmentsManager.exe
 C:\repo\demo\EnvironmentsManager\bin\Debug\EnvironmentsManager.pdb
@@ -50,6 +51,7 @@ C:\repo\demo\EnvironmentsManager\bin\Debug\Syroot.KnownFolders.xml
 C:\repo\demo\EnvironmentsManager\bin\Debug\WebDriver.xml
 C:\repo\demo\EnvironmentsManager\obj\Debug\MainWindow.g.cs
 C:\repo\demo\EnvironmentsManager\obj\Debug\App.g.cs
+C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager_Content.g.cs
 C:\repo\demo\EnvironmentsManager\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager_MarkupCompile.cache
 C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager_MarkupCompile.lref
@@ -58,6 +60,7 @@ C:\repo\demo\EnvironmentsManager\obj\Debug\MainWindow.baml
 C:\repo\demo\EnvironmentsManager\obj\Debug\styles\Button.baml
 C:\repo\demo\EnvironmentsManager\obj\Debug\styles\CheckBox.baml
 C:\repo\demo\EnvironmentsManager\obj\Debug\styles\ComboBox.baml
+C:\repo\demo\EnvironmentsManager\obj\Debug\styles\ComboBoxItem.baml
 C:\repo\demo\EnvironmentsManager\obj\Debug\styles\GridViewColumnHeader.baml
 C:\repo\demo\EnvironmentsManager\obj\Debug\styles\Label.baml
 C:\repo\demo\EnvironmentsManager\obj\Debug\styles\ListViewItem.baml
@@ -71,6 +74,4 @@ C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.csproj.CoreCompil
 C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.csproj.CopyComplete
 C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.exe
 C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.pdb
-C:\repo\demo\EnvironmentsManager\bin\Debug\environment_settings.xml
-C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager_Content.g.cs
-C:\repo\demo\EnvironmentsManager\obj\Debug\styles\ComboBoxItem.baml
+C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.csprojAssemblyReference.cache

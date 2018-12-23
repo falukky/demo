@@ -209,6 +209,14 @@
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="0" Foreground="#303030">
+                                    <StackPanel Width="120">
+                                        <Button Content="Settings"/>
+                                        <Button Content="Account"/>
+                                        <Separator/>
+                                        <Button Content="Help"/>
+                                    </StackPanel>
+                                </materialDesign:PopupBox>
                                 <Button Name="btnMinimize" 
                                         Height="60" 
                                         Width="40"
@@ -226,7 +234,6 @@
                                                     <Setter Property="Background" Value="Transparent"/>
                                                     <Setter Property="Foreground" Value="#303030"/>
                                                 </Trigger>
-
                                                 <Trigger Property="IsMouseOver" Value="True">
                                                     <Setter Property="Background" Value="Transparent"/>
                                                     <Setter Property="Foreground" Value="#707070"/>
