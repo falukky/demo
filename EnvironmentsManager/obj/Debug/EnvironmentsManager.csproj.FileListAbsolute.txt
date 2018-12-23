@@ -74,4 +74,3 @@ C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.csproj.CoreCompil
 C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.csproj.CopyComplete
 C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.exe
 C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.pdb
-C:\repo\demo\EnvironmentsManager\obj\Debug\EnvironmentsManager.csprojAssemblyReference.cache

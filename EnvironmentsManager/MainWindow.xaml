@@ -63,7 +63,7 @@
                 <GradientStop Color="#FF0A0909" Offset="0.3"/>
                 <GradientStop Color="#FF0C0A0A" Offset="0.5"/>
                 <GradientStop Color="#FF0C0A0A" Offset="0.7"/>
-                <GradientStop Color="#FF242424" Offset="1.0" />
+                <GradientStop Color="#FF242424" Offset="1.0"/>
             </LinearGradientBrush>
         </Border.Background>
         <Grid>
@@ -426,8 +426,9 @@
                                     <Grid Grid.Column="2">
                                         <ComboBox Name="ComboBoxEnvironment"        
                                                   SelectedIndex="0"
+                                                  Padding="0,0,0,0"
                                                   Height="30"
-                                                  Width="150"
+                                                  Width="130"
                                                   Style="{StaticResource ComboBoxDefaultFlatStyle}"
                                                   ItemContainerStyle="{StaticResource ComboBoxItemDefaultStyle}">
                                             <ComboBoxItem Content="-- Selece --"/>
