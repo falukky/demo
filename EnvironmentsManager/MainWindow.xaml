@@ -209,12 +209,18 @@
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="0" Foreground="#303030">
-                                    <StackPanel Width="120">
-                                        <Button Content="Settings"/>
-                                        <Button Content="Account"/>
+                                <materialDesign:PopupBox PlacementMode="BottomAndAlignLeftEdges" StaysOpen="False" Margin="0" Foreground="#303030" Background="Gray">
+                                    <StackPanel Width="100" Background="Silver">
+                                        <Button Content="Settings"
+                                                Height="40"
+                                                FontSize="13"/>
+                                        <Button Content="Account"
+                                                Height="40"
+                                                FontSize="13"/>
                                         <Separator/>
-                                        <Button Content="Help"/>
+                                        <Button Content="Help"
+                                                Height="40"
+                                                FontSize="13"/>
                                     </StackPanel>
                                 </materialDesign:PopupBox>
                                 <Button Name="btnMinimize" 
@@ -368,75 +374,15 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="1">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="40"/>
-                                            <RowDefinition Height="40"/>
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="120"/>
-                                            <ColumnDefinition Width="120"/>
-                                            <ColumnDefinition Width="120"/>
-                                        </Grid.ColumnDefinitions>
-                                        <CheckBox Name="CheckBoxRV"
-                                          Content="RV"       
-                                          Grid.Row="0"
-                                          Grid.Column="0"
-                                          VerticalAlignment="Center"
-                                          IsChecked="{Binding Path=IsSelected}"
-                                          Checked="CheckBoxRV_Checked"
-                                          Unchecked="CheckBoxRV_Unchecked"
-						                  Margin="0,0,0,0"/>
-                                        <CheckBox Name="CheckBoxPDK"
-                                          Content="PDK"       
-                                          Grid.Row="1"
-                                          Grid.Column="0"
-                                          VerticalAlignment="Center"
-                                          IsChecked="{Binding Path=IsSelected}"
-                                          Checked="CheckBoxPDK_Checked"
-                                          Unchecked="CheckBoxPDK_Unchecked"
-						                  Margin="0,0,0,0"/>
-                                        <CheckBox Name="CheckBoxORD"
-                                          Content="ORD"       
-                                          Grid.Row="0"
-                                          Grid.Column="1"
-                                          VerticalAlignment="Center"
-                                          IsChecked="{Binding Path=IsSelected}"
-                                          Checked="CheckBoxORD_Checked"
-                                          Unchecked="CheckBoxORD_Unchecked"
-						                  Margin="0,0,0,0"/>
-                                        <CheckBox Name="CheckBoxORD1"
-                                          Content="ORD1"       
-                                          Grid.Row="1"
-                                          Grid.Column="1"
-                                          VerticalAlignment="Center"
-                                          IsChecked="{Binding Path=IsSelected}"
-                                          Checked="CheckBoxORD1_Checked"
-                                          Unchecked="CheckBoxORD1_Unchecked"
-						                  Margin="0,0,0,0"/>
-                                        <CheckBox Name="CheckBoxAT"
-                                                  Content="AT"       
-                                                  Grid.Row="0"
-                                                  Grid.Column="2"
-                                                  VerticalAlignment="Center"
-                                                  IsChecked="{Binding Path=IsSelected}"
-                                                  Checked="CheckBoxAT_Checked"
-                                                  Unchecked="CheckBoxAT_Unchecked"
-						                          Margin="0,0,0,0"/>
-                                    </Grid>
-                                    <Grid Grid.Column="2">
                                         <ComboBox Name="ComboBoxEnvironment"        
                                                   SelectedIndex="0"
-                                                  Padding="0,0,0,0"
+                                                  SelectionChanged="ComboBoxEnvironment_SelectionChanged"
+                                                  ItemsSource="{Binding Environments}"
+                                                  Padding="10,0,0,0"
                                                   Height="30"
-                                                  Width="130"
-                                                  Style="{StaticResource ComboBoxDefaultFlatStyle}"
-                                                  ItemContainerStyle="{StaticResource ComboBoxItemDefaultStyle}">
-                                            <ComboBoxItem Content="-- Selece --"/>
-                                            <ComboBoxItem Content="RV"/>
-                                            <ComboBoxItem Content="PDK"/>
-                                            <ComboBoxItem Content="ORD"/>
-                                            <ComboBoxItem Content="ORD1"/>
-                                            <ComboBoxItem Content="AT"/>
+                                                  Width="150"
+                                                  Style="{StaticResource ComboBoxDarkFlatStyle}"
+                                                  ItemContainerStyle="{StaticResource ComboBoxItemDarkStyle}">
                                         </ComboBox>
                                     </Grid>
                                 </Grid>

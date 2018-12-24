@@ -2,300 +2,26 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:EnvironmentsManager.styles">
 
-    <Style x:Key="ComboBoxItemDefaultStyle" TargetType="{x:Type ComboBoxItem}">
-        <Setter Property="SnapsToDevicePixels" Value="true" />
-        <Setter Property="HorizontalAlignment" Value="Stretch" />
-        <Setter Property="VerticalAlignment" Value="Stretch" />
-        <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="FontSize" Value="12"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="ComboBoxItem">
-                    <Border Name="Border"
-                            Padding="3"
-                            Margin="0"
-                            BorderThickness="0"
-                            CornerRadius="0"
-                            Background="Transparent"
-                            BorderBrush="Transparent">
-                        <TextBlock TextAlignment="Left">
-                            <ContentPresenter />
-                        </TextBlock>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="true"/>
-                                <Condition Property="IsSelected" Value="false"/>
-                                <Condition Property="IsHighlighted" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="White"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="#FF7AA0CD"/>
-                            <Setter TargetName="Border" Property="Background" Value="#FF7AA0CD"/>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="false"/>
-                                <Condition Property="IsSelected" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="White"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="#FF103766"/>
-                            <Setter TargetName="Border" Property="Background" Value="#FF103766"/>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="true"/>
-                                <Condition Property="IsSelected" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="White"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="#FF103766"/>
-                            <Setter TargetName="Border" Property="Background" Value="#FF103766"/>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="false"/>
-                                <Condition Property="IsSelected" Value="false"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="#FF103766"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="White"/>
-                            <Setter TargetName="Border" Property="Background" Value="White"/>
-                        </MultiTrigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <Style x:Key="ComboBoxItemBlueStyle" TargetType="{x:Type ComboBoxItem}">
-        <Setter Property="SnapsToDevicePixels" Value="true" />
-        <Setter Property="HorizontalAlignment" Value="Stretch" />
-        <Setter Property="VerticalAlignment" Value="Stretch" />
-        <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="FontSize" Value="12"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="ComboBoxItem">
-                    <Border Name="Border"
-                            Padding="3"
-                            Margin="0"
-                            BorderThickness="0"
-                            CornerRadius="0"
-                            Background="Transparent"
-                            BorderBrush="Transparent">
-                        <TextBlock TextAlignment="Left">
-                            <ContentPresenter />
-                        </TextBlock>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="true"/>
-                                <Condition Property="IsSelected" Value="false"/>
-                                <Condition Property="IsHighlighted" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="Black"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="#55B3B3B6"/>
-                            <Setter TargetName="Border" Property="Background" Value="#55B3B3B6"/>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="false"/>
-                                <Condition Property="IsSelected" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="Black"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="Silver"/>
-                            <Setter TargetName="Border" Property="Background" Value="Silver"/>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="true"/>
-                                <Condition Property="IsSelected" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="Black"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="Silver"/>
-                            <Setter TargetName="Border" Property="Background" Value="Silver"/>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="false"/>
-                                <Condition Property="IsSelected" Value="false"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="Black"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="White"/>
-                            <Setter TargetName="Border" Property="Background" Value="White"/>
-                        </MultiTrigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <Style x:Key="ComboBoxItemLightStyle" TargetType="{x:Type ComboBoxItem}">
-        <Setter Property="SnapsToDevicePixels" Value="true" />
-        <Setter Property="HorizontalAlignment" Value="Stretch" />
-        <Setter Property="VerticalAlignment" Value="Stretch" />
-        <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="FontSize" Value="13"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="ComboBoxItem">
-                    <Border
-                        Name="Border"
-                        Padding="3"
-                        Margin="0"
-                        BorderThickness="0"
-                        CornerRadius="0"
-                        Background="Transparent"
-                        BorderBrush="Transparent" >
-                        <TextBlock TextAlignment="Left">
-                                <ContentPresenter />
-                        </TextBlock>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="true"/>
-                                <Condition Property="IsSelected" Value="false"/>
-                                <Condition Property="IsHighlighted" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="White"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="#FF266BC7"/>
-                            <Setter TargetName="Border" Property="Background" Value="#FF266BC7"/>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="false"/>
-                                <Condition Property="IsSelected" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="Black"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="Silver"/>
-                            <Setter TargetName="Border" Property="Background" Value="Silver"/>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="true"/>
-                                <Condition Property="IsSelected" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="White"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="Gray"/>
-                            <Setter TargetName="Border" Property="Background" Value="Gray"/>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="false"/>
-                                <Condition Property="IsSelected" Value="false"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="#FF103766"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="White"/>
-                            <Setter TargetName="Border" Property="Background" Value="White"/>
-                        </MultiTrigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
     <Style x:Key="ComboBoxItemDarkStyle" TargetType="{x:Type ComboBoxItem}">
-        <Setter Property="SnapsToDevicePixels" Value="true" />
-        <Setter Property="HorizontalAlignment" Value="Stretch" />
-        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="140"/>
         <Setter Property="OverridesDefaultStyle" Value="true"/>
         <Setter Property="FontSize" Value="11"/>
-        <Setter Property="FontFamily" Value="pack://application:,,,/Resources/#Kermesse" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ComboBoxItem">
-                    <Border
-                        Name="Border"
-                        Padding="3"
-                        Margin="0"
-                        BorderThickness="0"
-                        CornerRadius="0"
-                        Background="Transparent"
-                        BorderBrush="Transparent" >
-                        <TextBlock TextAlignment="Left">
-                                <ContentPresenter />
-                        </TextBlock>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="true"/>
-                                <Condition Property="IsSelected" Value="false"/>
-                                <Condition Property="IsHighlighted" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="Gainsboro"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="DimGray"/>
-                            <Setter TargetName="Border" Property="Background" Value="DimGray"/>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="false"/>
-                                <Condition Property="IsSelected" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="Black"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="#252525"/>
-                            <Setter TargetName="Border" Property="Background" Value="#252525"/>
-                            <Setter Property="Foreground" Value="Gainsboro"/>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="true"/>
-                                <Condition Property="IsSelected" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="White"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="Gray"/>
-                            <Setter TargetName="Border" Property="Background" Value="Gray"/>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="false"/>
-                                <Condition Property="IsSelected" Value="false"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="#FF103766"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="White"/>
-                            <Setter TargetName="Border" Property="Background" Value="White"/>
-                        </MultiTrigger>
-
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <Style x:Key="ComboBoxItemTitleBartStyle" TargetType="{x:Type ComboBoxItem}">
-        <Setter Property="SnapsToDevicePixels" Value="true" />
-        <Setter Property="HorizontalAlignment" Value="Stretch" />
-        <Setter Property="VerticalAlignment" Value="Stretch" />
-        <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="ComboBoxItem">
-                    <Border
-                            Name="Border"
+                    <Border Name="Border"   
                             Padding="3"
                             Margin="0"
                             BorderThickness="0"
                             CornerRadius="0"
                             Background="Transparent"
-                            BorderBrush="Transparent" >
+                            BorderBrush="Transparent">
                         <TextBlock TextAlignment="Left">
-                                <ContentPresenter />
+                                <ContentPresenter/>
                         </TextBlock>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -305,42 +31,33 @@
                                 <Condition Property="IsSelected" Value="false"/>
                                 <Condition Property="IsHighlighted" Value="true"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="#FF103766"/>
-                            <Setter Property="FontWeight" Value="Bold"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="White"/>
-                            <Setter TargetName="Border" Property="Background" Value="White"/>
+                            <Setter TargetName="Border" Property="Background" Value="#959595"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="#959595"/>
                         </MultiTrigger>
-
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsMouseOver" Value="false"/>
                                 <Condition Property="IsSelected" Value="true"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="#FF103766"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="White"/>
-                            <Setter TargetName="Border" Property="Background" Value="White"/>
+                            <Setter TargetName="Border" Property="Background" Value="Silver"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="Silver"/>
                         </MultiTrigger>
-
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsMouseOver" Value="true"/>
                                 <Condition Property="IsSelected" Value="true"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="#FF103766"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="White"/>
-                            <Setter TargetName="Border" Property="Background" Value="White"/>
+                            <Setter TargetName="Border" Property="Background" Value="#959595"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="#959595"/>
                         </MultiTrigger>
-
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsMouseOver" Value="false"/>
                                 <Condition Property="IsSelected" Value="false"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="#FF103766"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="White"/>
-                            <Setter TargetName="Border" Property="Background" Value="White"/>
+                            <Setter TargetName="Border" Property="Background" Value="Transparent"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="Transparent"/>
                         </MultiTrigger>
-
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

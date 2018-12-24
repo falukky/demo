@@ -38,13 +38,14 @@ namespace EnvironmentsManager
             XmlNode rootNode = xmlDoc.SelectSingleNode("/environments");
             XmlNodeList xmlNodeList = rootNode.ChildNodes;
             environments = new ObservableCollection<classes.env.Environment>();
+            environments.Add(new classes.env.Environment("Select", "", null));
             ObservableCollection<User> users;
             applicationViewModel.Users = new ObservableCollection<User>();
 
             foreach (XmlNode environmentNode in rootNode.ChildNodes)
             {
                 users = new ObservableCollection<User>();
-                string name = environmentNode["name"].InnerText;
+                string name = environmentNode["name"].InnerText.ToUpper();
                 string url = environmentNode["url"].InnerText;
 
                 XmlNodeList list = environmentNode.ChildNodes;
@@ -63,7 +64,6 @@ namespace EnvironmentsManager
                     {
                         User user = new User(node["name"].InnerText, node["password"].InnerText, userType);
                         users.Add(user);
-                        //applicationViewModel.Users.Add(user);
                     }
                 }
 
@@ -104,7 +104,7 @@ namespace EnvironmentsManager
         {
             foreach (classes.env.Environment environment in applicationViewModel.Environments)
             {
-                if (environment.Name.ToLower() == name)
+                if (environment.Name.ToLower() == name.ToLower())
                 {
                     applicationViewModel.SelectedEnvironment = environment;
                     break;
@@ -124,79 +124,11 @@ namespace EnvironmentsManager
             DragMove();
         }
 
-        private void CheckBoxRV_Checked(object sender, RoutedEventArgs e)
-        {
-            CheckBoxPDK.IsChecked = false;
-            CheckBoxORD.IsChecked = false;
-            CheckBoxORD1.IsChecked = false;
-            CheckBoxAT.IsChecked = false;
-
-            ListViewUsers.ItemsSource = null;
-            SetSelectedEnvironment("rv");
-        }
-
-        private void CheckBoxRV_Unchecked(object sender, RoutedEventArgs e)
+        private void ComboBoxEnvironment_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ListViewUsers.ItemsSource = null;
-        }
-
-        private void CheckBoxPDK_Checked(object sender, RoutedEventArgs e)
-        {
-            CheckBoxRV.IsChecked = false;
-            CheckBoxORD.IsChecked = false;
-            CheckBoxORD1.IsChecked = false;
-            CheckBoxAT.IsChecked = false;
-            ListViewUsers.ItemsSource = null;
-            
-
-            SetSelectedEnvironment("pdk");
-        }
-
-        private void CheckBoxPDK_Unchecked(object sender, RoutedEventArgs e)
-        {
-            ListViewUsers.ItemsSource = null;
-        }
-
-        private void CheckBoxORD_Checked(object sender, RoutedEventArgs e)
-        {
-            CheckBoxRV.IsChecked = false;
-            CheckBoxPDK.IsChecked = false;
-            CheckBoxORD1.IsChecked = false;
-            CheckBoxAT.IsChecked = false;
-            SetSelectedEnvironment("ord");
-        }
-
-        private void CheckBoxORD_Unchecked(object sender, RoutedEventArgs e)
-        {
-            ListViewUsers.ItemsSource = null;
-        }
-
-        private void CheckBoxORD1_Checked(object sender, RoutedEventArgs e)
-        {
-            CheckBoxRV.IsChecked = false;
-            CheckBoxPDK.IsChecked = false;
-            CheckBoxORD.IsChecked = false;
-            CheckBoxAT.IsChecked = false;
-            SetSelectedEnvironment("ord1");
-        }
-
-        private void CheckBoxORD1_Unchecked(object sender, RoutedEventArgs e)
-        {
-            ListViewUsers.ItemsSource = null;
-        }
-
-        private void CheckBoxAT_Checked(object sender, RoutedEventArgs e)
-        {
-            CheckBoxRV.IsChecked = false;
-            CheckBoxPDK.IsChecked = false;
-            CheckBoxORD.IsChecked = false;
-            CheckBoxORD1.IsChecked = false;
-            SetSelectedEnvironment("at");
-        }
-
-        private void CheckBoxAT_Unchecked(object sender, RoutedEventArgs e)
-        {
-            ListViewUsers.ItemsSource = null;
+            string environmentName = ComboBoxEnvironment.SelectedItem.ToString();
+            SetSelectedEnvironment(environmentName);
         }
     }
 }

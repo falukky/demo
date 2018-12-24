@@ -50,7 +50,7 @@ namespace EnvironmentsManager.classes.viewmodel
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        }        
 
         public event PropertyChangedEventHandler PropertyChanged;
     }

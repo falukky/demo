@@ -15,5 +15,10 @@ namespace EnvironmentsManager.classes.env
             URL = url;
             Users = users;
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
