@@ -6,9 +6,7 @@
         <Setter Property="SnapsToDevicePixels" Value="true" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="VerticalAlignment" Value="Stretch" />
-        <Setter Property="HorizontalContentAlignment" Value="Left"/>
         <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="FontFamily" Value="{DynamicResource PolenticalNeonRegular}"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -20,7 +18,7 @@
                             CornerRadius="0"
                             Background="Transparent"
                             BorderBrush="Transparent">
-                        <TextBlock TextAlignment="Center">
+                        <TextBlock TextAlignment="Left">
                             <ContentPresenter />
                         </TextBlock>
                     </Border>
@@ -31,9 +29,9 @@
                                 <Condition Property="IsSelected" Value="false"/>
                                 <Condition Property="IsHighlighted" Value="true"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="Transparent"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="Silver"/>
-                            <Setter TargetName="Border" Property="Background" Value="Silver"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="#FF7AA0CD"/>
+                            <Setter TargetName="Border" Property="Background" Value="#FF7AA0CD"/>
                         </MultiTrigger>
 
                         <MultiTrigger>
@@ -41,9 +39,9 @@
                                 <Condition Property="IsMouseOver" Value="false"/>
                                 <Condition Property="IsSelected" Value="true"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="Transparent"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="Yellow"/>
-                            <Setter TargetName="Border" Property="Background" Value="Yellow0"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="#FF103766"/>
+                            <Setter TargetName="Border" Property="Background" Value="#FF103766"/>
                         </MultiTrigger>
 
                         <MultiTrigger>
@@ -51,9 +49,9 @@
                                 <Condition Property="IsMouseOver" Value="true"/>
                                 <Condition Property="IsSelected" Value="true"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="Transparent"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="Transparent"/>
-                            <Setter TargetName="Border" Property="Background" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="#FF103766"/>
+                            <Setter TargetName="Border" Property="Background" Value="#FF103766"/>
                         </MultiTrigger>
 
                         <MultiTrigger>
@@ -61,10 +59,11 @@
                                 <Condition Property="IsMouseOver" Value="false"/>
                                 <Condition Property="IsSelected" Value="false"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Foreground" Value="Transparent"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="Transparent"/>
-                            <Setter TargetName="Border" Property="Background" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="#FF103766"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="White"/>
+                            <Setter TargetName="Border" Property="Background" Value="White"/>
                         </MultiTrigger>
+
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -99,8 +98,8 @@
                                 <Condition Property="IsHighlighted" Value="true"/>
                             </MultiTrigger.Conditions>
                             <Setter Property="Foreground" Value="Black"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="Silver"/>
-                            <Setter TargetName="Border" Property="Background" Value="Silver"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="#55B3B3B6"/>
+                            <Setter TargetName="Border" Property="Background" Value="#55B3B3B6"/>
                         </MultiTrigger>
 
                         <MultiTrigger>
