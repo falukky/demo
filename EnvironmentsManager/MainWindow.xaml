@@ -211,7 +211,14 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="60"/>
                 </Grid.RowDefinitions>
-                <Border Grid.Row="0" CornerRadius="5,5,0,0" Background="Transparent" BorderBrush="#202020" BorderThickness="0,0,0,0.5" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+                <Border Grid.Row="0" CornerRadius="5,5,0,0" BorderBrush="#202020" BorderThickness="0,0,0,0.5" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                            <GradientStop Color="#FF232121" Offset="0"/>
+                            <GradientStop Color="#FF030202" Offset="0.3"/>
+                            <GradientStop Color="#FF171717" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Border.Background>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
