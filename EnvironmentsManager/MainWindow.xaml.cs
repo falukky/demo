@@ -116,7 +116,22 @@ namespace EnvironmentsManager
 
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            int index = ListViewMenu.SelectedIndex;
+            switch (index)
+            {
+                case 0:
+                    grid1.Visibility = Visibility.Visible;
+                    grid2.Visibility = Visibility.Collapsed;
+                    break;
 
+                case 1:
+                    grid1.Visibility = Visibility.Collapsed;
+                    grid2.Visibility = Visibility.Visible;
+                    break;
+
+                default:
+                    break;
+            }
         }
 
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

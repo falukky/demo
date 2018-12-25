@@ -166,14 +166,24 @@
                         <ListView x:Name="ListViewMenu" Foreground="#707070" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged" Margin="0,20,0,0">
                             <ListViewItem x:Name="ItemHome" Height="60">
                                 <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon Kind="LoginVariant" Height="25" Width="25" Margin="10"/>
-                                    <TextBlock Text="Login" VerticalAlignment="Center" Margin="5 10"/>
+                                    <materialDesign:PackIcon Kind="Compare"
+                                                             Height="25"
+                                                             Width="25"
+                                                             Margin="10"/>
+                                    <TextBlock Text="Compare"
+                                               VerticalAlignment="Center"
+                                               Margin="5 10"/>
                                 </StackPanel>
                             </ListViewItem>
                             <ListViewItem x:Name="ItemCreate" Height="60">
                                 <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon Kind="Pencil" Height="25" Width="25" Margin="10"/>
-                                    <TextBlock Text="Create" VerticalAlignment="Center" Margin="5 10"/>
+                                    <materialDesign:PackIcon Kind="Pencil"
+                                                             Height="25"
+                                                             Width="25" 
+                                                             Margin="10"/>
+                                    <TextBlock Text="Create" 
+                                               VerticalAlignment="Center"
+                                               Margin="5 10"/>
                                 </StackPanel>
                             </ListViewItem>
                             <ListViewItem Height="60">
@@ -209,19 +219,22 @@
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                <materialDesign:PopupBox PlacementMode="BottomAndAlignLeftEdges" StaysOpen="False" Margin="0" Foreground="#303030" Background="Gray">
-                                    <StackPanel Width="100" Background="Silver">
-                                        <Button Content="Settings"
+                                <materialDesign:PopupBox PlacementMode="BottomAndAlignLeftEdges" StaysOpen="False" Margin="0" Foreground="#303030">
+                                    <Border Background="#A9A9A9" CornerRadius="3">
+                                        <StackPanel Width="100">
+                                            <Button Content="Settings"
                                                 Height="40"
                                                 FontSize="13"/>
-                                        <Button Content="Account"
+                                            <Button Content="Account"
                                                 Height="40"
                                                 FontSize="13"/>
-                                        <Separator/>
-                                        <Button Content="Help"
+                                            <Separator Background="Black"
+                                                       Height="1"/>
+                                            <Button Content="Help"
                                                 Height="40"
                                                 FontSize="13"/>
-                                    </StackPanel>
+                                        </StackPanel>
+                                    </Border>
                                 </materialDesign:PopupBox>
                                 <Button Name="btnMinimize" 
                                         Height="60" 
@@ -339,42 +352,43 @@
                 </Border>
                 <Border Grid.Row="1">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="140"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0">
+                        <Grid Name="grid1" Visibility="Collapsed">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="140"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
-                            <Grid Margin="0,20,0,0" Grid.Row="0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="30"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Text="Environment"
+                            <Grid Grid.Row="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Margin="0,20,0,0" Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Environment"
                                        FontSize="18"
                                        VerticalAlignment="Center"                                                       
                                        FontWeight="ExtraBold"
                                        Grid.Column="0"
                                        Margin="20,0,0,0"/>
-                                <Separator Style="{StaticResource SeparatoprDefaultStyle}"
+                                    <Separator Style="{StaticResource SeparatoprDefaultStyle}"
                                        HorizontalAlignment="Stretch"
                                        Grid.Column="1"
-                                       Width="1000"
+                                       Width="2000"
                                        Margin="10,0,0,0"/>
-                            </Grid>
-                            <Grid Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="30"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="1">
-                                        <ComboBox Name="ComboBoxEnvironment"        
+                                </Grid>
+                                <Grid Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="30"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="1">
+                                            <ComboBox Name="ComboBoxEnvironment"        
                                                   SelectedIndex="0"
                                                   SelectionChanged="ComboBoxEnvironment_SelectionChanged"
                                                   ItemsSource="{Binding Environments}"
@@ -383,41 +397,41 @@
                                                   Width="150"
                                                   Style="{StaticResource ComboBoxDarkFlatStyle}"
                                                   ItemContainerStyle="{StaticResource ComboBoxItemDarkStyle}">
-                                        </ComboBox>
+                                            </ComboBox>
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                             </Grid>
-                        </Grid>
-                        <Grid Grid.Row="1">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid Margin="0,20,0,0" Grid.Row="0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="30"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Text="Environment users"
+                            <Grid Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Margin="0,20,0,0" Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Environment users"
                                            FontSize="18"
                                            VerticalAlignment="Center"                                                       
                                            FontWeight="ExtraBold"
                                            Grid.Column="0"
                                            Margin="20,0,0,0"/>
-                                <Separator Style="{StaticResource SeparatoprDefaultStyle}"
+                                    <Separator Style="{StaticResource SeparatoprDefaultStyle}"
                                            HorizontalAlignment="Stretch"
                                            Grid.Column="1"
                                            Width="1000"
                                            Margin="10,0,0,0"/>
-                            </Grid>
-                            <Grid Margin="0,0,0,0" Grid.Row="1">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="30"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="30"/>
-                                </Grid.ColumnDefinitions>
-                                <ListView Name="ListViewUsers"
+                                </Grid>
+                                <Grid Margin="0,0,0,0" Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ListView Name="ListViewUsers"
                                           Grid.Column="1"
 					                      Background="Transparent"
 					                      BorderBrush="Transparent"
@@ -427,61 +441,127 @@
 					                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                           ScrollViewer.VerticalScrollBarVisibility="Auto"					                                      
 					                      Margin="0,10,0,0">
-                                    <ListView.View>
-                                        <GridView ColumnHeaderContainerStyle="{StaticResource ListViewHeaderDefaultStyle}">
-                                            <GridViewColumn>
-                                                <GridViewColumn.CellTemplate>
-                                                    <DataTemplate>
-                                                        <CheckBox Name="checkBoxIsSelected"
+                                        <ListView.View>
+                                            <GridView ColumnHeaderContainerStyle="{StaticResource ListViewHeaderDefaultStyle}">
+                                                <GridViewColumn>
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <CheckBox Name="checkBoxIsSelected"
                                                                   IsChecked="{Binding Path=IsSelected}"
                                                                   Width="30"
                                                                   Style="{StaticResource CheckBoxDefaultStyle}" 
 						                                          Margin="0,0,0,0"/>
-                                                    </DataTemplate>
-                                                </GridViewColumn.CellTemplate>
-                                            </GridViewColumn>
-                                            <GridViewColumn Header="Name" Width="150">
-                                                <GridViewColumn.CellTemplate>
-                                                    <DataTemplate>
-                                                        <Grid>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="Name" Width="150">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
                                                             <Grid>
-                                                                <TextBlock Text="{Binding Path=Name}"
+                                                                <Grid>
+                                                                    <TextBlock Text="{Binding Path=Name}"
                                                                            Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListViewItem}}}"
                                                                            Margin="0,0,0,0"/>
+                                                                </Grid>
                                                             </Grid>
-                                                        </Grid>
-                                                    </DataTemplate>
-                                                </GridViewColumn.CellTemplate>
-                                            </GridViewColumn>
-                                            <GridViewColumn Header="User type" Width="150">
-                                                <GridViewColumn.CellTemplate>
-                                                    <DataTemplate>
-                                                        <Grid>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="User type" Width="150">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
                                                             <Grid>
-                                                                <TextBlock Text="{Binding Path=UserType}"
+                                                                <Grid>
+                                                                    <TextBlock Text="{Binding Path=UserType}"
                                                                            Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListViewItem}}}"
                                                                            Margin="0,0,0,0"/>
+                                                                </Grid>
                                                             </Grid>
-                                                        </Grid>
-                                                    </DataTemplate>
-                                                </GridViewColumn.CellTemplate>
-                                            </GridViewColumn>
-                                            <GridViewColumn Header="Password" Width="150">
-                                                <GridViewColumn.CellTemplate>
-                                                    <DataTemplate>
-                                                        <Grid>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="Password" Width="150">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
                                                             <Grid>
-                                                                <TextBlock Text="{Binding Path=Password}"
+                                                                <Grid>
+                                                                    <TextBlock Text="{Binding Path=Password}"
                                                                            Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListViewItem}}}"
                                                                            Margin="0,0,0,0"/>
+                                                                </Grid>
                                                             </Grid>
-                                                        </Grid>
-                                                    </DataTemplate>
-                                                </GridViewColumn.CellTemplate>
-                                            </GridViewColumn>
-                                        </GridView>
-                                    </ListView.View>
-                                </ListView>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                            </GridView>
+                                        </ListView.View>
+                                    </ListView>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid Name="grid2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="200"/>
+                                <RowDefinition Height="200"/>
+                                <RowDefinition Height="200"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Input"
+                                               FontSize="18"
+                                               VerticalAlignment="Center"                                                       
+                                               FontWeight="ExtraBold"
+                                               Grid.Column="0"
+                                               Margin="20,0,0,0"/>
+                                    <Separator Style="{StaticResource SeparatoprDefaultStyle}"
+                                               HorizontalAlignment="Stretch"
+                                               Grid.Column="1"
+                                               Width="2000"
+                                               Margin="10,0,0,0"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Options"
+                                               FontSize="18"
+                                               VerticalAlignment="Center"                                                       
+                                               FontWeight="ExtraBold"
+                                               Grid.Column="0"
+                                               Margin="20,0,0,0"/>
+                                    <Separator Style="{StaticResource SeparatoprDefaultStyle}"
+                                               HorizontalAlignment="Stretch"
+                                               Grid.Column="1"
+                                               Width="2000"
+                                               Margin="10,0,0,0"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Row="3">
+
                             </Grid>
                         </Grid>
                     </Grid>
