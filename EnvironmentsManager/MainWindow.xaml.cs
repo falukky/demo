@@ -1,6 +1,7 @@
 ﻿using EnvironmentsManager.classes.enums;
 using EnvironmentsManager.classes.env;
 using EnvironmentsManager.classes.viewmodel;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -144,6 +145,23 @@ namespace EnvironmentsManager
             ListViewUsers.ItemsSource = null;
             string environmentName = ComboBoxEnvironment.SelectedItem.ToString();
             SetSelectedEnvironment(environmentName);
+        }
+
+        private void BtnAddFile_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Title = "Please Select excel data file",
+                Filter = "Excel file (*.xlsx)|*.xlsx;",
+                Multiselect = false,
+                RestoreDirectory = true
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string file = openFileDialog.FileName;
+                textBoxDataFile.Text = file;
+            }
         }
     }
 }
